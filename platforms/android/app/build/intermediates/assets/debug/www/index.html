@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/app.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Blog post</title>
+    </head>
+    <body>
+        <!-- Home page -->
+        <div class="app-page" data-page="home">
+            <div class="app-topbar">
+                <div class="app-title">Home page</div>       
+            </div>
+            <div class="app-content cp">
+                <div class="app-section">
+                  <div class="app-button" data-target="create">Create Post</div>
+                </div>
+                <div class="home-c">
+                    <h2>You are welcome to PureGem Blog.</h2>
+                    <h4>Below are some of the recent posts from my <a href="https://puregemblog.000webhostapp.com">blog:</a></h4>
+                    <div class="container pt-2" id="mainDiv"></div>
+                </div>
+            </div>
+        </div>    
+
+            <!-- Create Post page -->
+        <div class="app-page" data-page="create">
+            <div class="app-topbar">
+              <div class="app-button left" data-back data-autotitle></div>
+              <div class="app-title">Create post page</div>
+            </div>
+            <div class="app-content">
+                <div class="createpost">
+                    <div class="app-content post-container">
+                        <div class="d-flex justify-content-center pt-2" id="spinner">
+                            <div class="spinner-border text-primary"></div>
+                        </div>
+                        <!-- <div class="container pt-2" id="mainDiv"></div> -->
+                        <div class="container">
+                            <h2>Create a post</h2>
+                            <form class="was-validated">
+                                <div class="form-group">
+                                    <label for="title">Title:</label>
+                                    <input type="text" class="formcontrol" id="title" placeholder="title of post" name="title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="content">Content:</label>
+                                    <textarea name="content" id="content" cols="30" rows="3" class="form-control" required> type your post... </textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                               
+                            </form>
+                        </div>
+                    </div>                  
+                </div>
+            </div>
+        </div>
+        <script src="cordova.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
