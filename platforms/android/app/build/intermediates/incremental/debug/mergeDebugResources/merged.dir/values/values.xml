@@ -310,7 +310,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="activity_name">@string/launcher_name</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
-    <string name="app_name">3rdSessionAssignment</string>
+    <string name="app_name">RevisionAssignment</string>
     <string name="launcher_name">@string/app_name</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>

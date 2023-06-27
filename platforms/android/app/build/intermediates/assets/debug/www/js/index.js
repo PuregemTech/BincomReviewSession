@@ -12,6 +12,30 @@ try {
 } catch (err) {
     App.load('home');
 }
+
+
+//Camera js code
+document.getElementById("cameraTakePicture").addEventListener 
+   ("click", cameraTakePicture); 
+
+   function cameraTakePicture(e) { 
+    e.preventDefault();
+    navigator.camera.getPicture(onSuccess, onFail, {  
+       quality: 50, 
+       destinationType: Camera.DestinationType.DATA_URL 
+    });  
+    
+    function onSuccess(imageData) { 
+       var image = document.getElementById('myImage'); 
+       image.src = "data:image/jpeg;base64," + imageData; 
+    }  
+    
+    function onFail(message) { 
+       alert('Failed because: ' + message); 
+    } 
+ }
+
+
 //function to clear the input and textarea field after submit
 function ClearFields() {
     document.getElementById("title").value = "";
@@ -19,7 +43,7 @@ function ClearFields() {
 }
 
 $(document).ready(function () {
-    var rootUrl = 'https://puregemblog.000webhostapp.com';
+    // var rootUrl = 'https://puregemblog.000webhostapp.com';
     
     const url = `${rootUrl}/wp-json/wp/v2/posts`;
     
@@ -69,6 +93,7 @@ $(document).ready(function () {
         var formData = {
             title: $('input[name=title]').val(),
             content: $('textarea[name=content]').val(),
+            // myImage: $('myImage').attr('src'),
             status: 'publish',
         };
 
@@ -93,3 +118,5 @@ $(document).ready(function () {
         ClearFields();
     });
 });
+
+
