@@ -43,7 +43,7 @@ function ClearFields() {
 }
 
 $(document).ready(function () {
-    // var rootUrl = 'https://puregemblog.000webhostapp.com';
+    var rootUrl = 'https://puregemblog.000webhostapp.com';
     
     const url = `${rootUrl}/wp-json/wp/v2/posts`;
     
