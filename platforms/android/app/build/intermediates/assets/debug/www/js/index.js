@@ -15,8 +15,13 @@ try {
 
 
 //Camera js code
-document.getElementById("cameraTakePicture").addEventListener 
-   ("click", cameraTakePicture); 
+const btn = document.getElementById("cameraTakePicture");
+if (btn) {
+    btn.addEventListener('click', cameraTakePicture);
+  }
+
+// document.getElementById("cameraTakePicture").addEventListener 
+//    ("click", cameraTakePicture); 
 
    function cameraTakePicture(e) { 
     e.preventDefault();
@@ -43,7 +48,7 @@ function ClearFields() {
 }
 
 $(document).ready(function () {
-    // var rootUrl = 'https://puregemblog.000webhostapp.com';
+    var rootUrl = 'https://puregemblog.000webhostapp.com';
     
     const url = `${rootUrl}/wp-json/wp/v2/posts`;
     

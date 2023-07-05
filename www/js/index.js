@@ -15,8 +15,13 @@ try {
 
 
 //Camera js code
-document.getElementById("cameraTakePicture").addEventListener 
-   ("click", cameraTakePicture); 
+const btn = document.getElementById("cameraTakePicture");
+if (btn) {
+    btn.addEventListener('click', cameraTakePicture);
+  }
+
+// document.getElementById("cameraTakePicture").addEventListener 
+//    ("click", cameraTakePicture); 
 
    function cameraTakePicture(e) { 
     e.preventDefault();
